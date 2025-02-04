@@ -5,14 +5,189 @@
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="/styles.css" />
     <link rel="icon" href="/sports-icon.png" type="image/x-icon" />
+    <style>
+      /* Global Styles */
+      body {
+        background-image: url("bg.jpg");
+        background-repeat: no-repeat;
+        background-size:cover;
+        
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+       
+        color: #333;
+      }
+
+      /* Container */
+      .container {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 20px auto;
+        padding: 20px;
+        background:url("basketball.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Header */
+      header {
+        text-align: center;
+        background: #2c3e50;
+        color: white;
+        padding: 15px;
+        border-radius: 12px 12px 0 0;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 22px;
+      }
+
+      /* Dashboard Sections */
+      .dashboard {
+        justify-content: flex-start;
+        display: flex;
+        flex-wrap:nowrap;
+        gap: 20px;
+      }
+
+      /* Logout */
+      .logout {
+        text-align: right;
+      }
+
+      .logout a {
+        text-decoration: none;
+        color: #ff4d4d;
+        font-weight: bold;
+      }
+
+      /* Section Headings */
+      h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #2c3e50;
+        padding-bottom: 5px;
+        font-size: 20px;
+      }
+
+      /* Session Lists */
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      ul li {
+        background: #eef2f6;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      /* Players List */
+      ul ul {
+        padding-left: 20px;
+      }
+
+      ul ul li {
+        font-size: 14px;
+      }
+
+      /* Cancelled Sessions */
+      .cancelled {
+        color: #ff4d4d;
+        font-weight: bold;
+      }
+      .cont{
+        width: 400px;
+        height: 700px;
+      }
+
+      /* Forms */
+      form {
+        display: flex;
+        
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      form input,
+      form select {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+      }
+
+      form button {
+        background: #2c3e50;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 6px;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      form button:hover {
+        background: #304860;
+      }
+      .report{
+        margin-top: 70px;
+        background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  align-items: center;
+      }
+      
+    </style>
   </head>
   <body id="admin-dashboard">
     <header>
       <h1>Welcome, <%= user.name %></h1>
-    </header>
-    <div class="container dashboard">
       <div class="logout">
         <a href="/logout">Logout</a>
+      </div>
+    </header>
+    <div class="container dashboard">
+      <div class="cont">
+        <h2>Create Session</h2>
+        <form action="/create-session" method="POST">
+          <label for="sport_id">Sport:</label>
+          <select name="sport_id" id="sport_id" required>
+            <% sports.forEach(sport => { %>
+            <option value="<%= sport.id %>"><%= sport.name %></option>
+            <% }) %>
+          </select>
+          <label for="team1">Team 1:</label>
+          <input type="text" name="team1" id="team1" required />
+          <label for="team2">Team 2:</label>
+          <input type="text" name="team2" id="team2" required />
+          <label for="additional_players">Additional Players:</label>
+          <input
+            type="number"
+            name="additional_players"
+            id="additional_players"
+            required
+          />
+          <label for="date">Date:</label>
+          <input type="datetime-local" name="date" id="date" required />
+          <label for="venue">Venue:</label>
+          <input type="text" name="venue" id="venue" required />
+          <button type="submit">Create Session</button>
+        </form>
       </div>
       <section class="content">
         <div>
@@ -28,8 +203,9 @@
             <input type="text" name="name" id="name" required />
             <button type="submit">Create Sport</button>
           </form>
+          
         </div>
-        <div>
+        <div class="sessions">
           <h2>All Sessions</h2>
           <ul>
             <% sessions.forEach(session => { %>
@@ -68,36 +244,11 @@
             <% }) %>
           </ul>
         </div>
+        
       </section>
 
-      <h2>Create Session</h2>
-      <form action="/create-session" method="POST">
-        <label for="sport_id">Sport:</label>
-        <select name="sport_id" id="sport_id" required>
-          <% sports.forEach(sport => { %>
-          <option value="<%= sport.id %>"><%= sport.name %></option>
-          <% }) %>
-        </select>
-        <label for="team1">Team 1:</label>
-        <input type="text" name="team1" id="team1" required />
-        <label for="team2">Team 2:</label>
-        <input type="text" name="team2" id="team2" required />
-        <label for="additional_players">Additional Players:</label>
-        <input
-          type="number"
-          name="additional_players"
-          id="additional_players"
-          required
-        />
-        <label for="date">Date:</label>
-        <input type="datetime-local" name="date" id="date" required />
-        <label for="venue">Venue:</label>
-        <input type="text" name="venue" id="venue" required />
-        <button type="submit">Create Session</button>
-      </form>
-
-      <a href="/reports" class="report-link">View Reports</a>
     </div>
+    
   </body>
   
 </html>

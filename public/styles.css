@@ -12,11 +12,12 @@ body {
 
 /* Container Styling */
 .container {
-  max-width: 1200px;
+  width: 500px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #81aec3;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
 
@@ -38,16 +39,14 @@ body {
   padding: 0;
   display: flex;
   justify-content: flex-end;
-  /* Align links to the right */
 }
 
 .navbar ul li {
   margin-left: 30px;
-  /* Space between each list item */
 }
 
 .navbar ul li a {
-  color: black;
+  color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
@@ -58,18 +57,14 @@ body {
 
 .navbar ul li a:hover {
   color: #f39c12;
-  /* Yellow color on hover */
   background-color: #444;
-  /* Darker background on hover */
   border-radius: 4px;
-  /* Rounded corners on hover */
 }
 
 /* Navbar Responsiveness for Mobile */
 @media (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
-    /* Stack the navbar links vertically on small screens */
     align-items: center;
   }
 
@@ -81,7 +76,8 @@ body {
 
 /* Main Section Styling */
 .main-section {
-  background-color: #E2FADB;
+  background: rgba(200, 255, 255, 0.2); /* Semi-transparent white */
+  backdrop-filter: blur(10px);
   padding: 40px;
   margin-top: 20px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
@@ -94,7 +90,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Apply linear gradient transition to the text */
 .main-section p,
 .features-list h2,
 .features-list p {
@@ -105,18 +100,15 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   animation: textGradient 5s linear infinite;
-  /* Animation for smooth transition */
 }
 
 @keyframes textGradient {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
@@ -175,15 +167,6 @@ body {
   text-align: center;
 }
 
-/* Additional Styling for Spacing and Shadows */
-.box-shadow {
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.mt-40 {
-  margin-top: 40px;
-}
-
 /* Gradient Text with Linear Transition */
 .gradient-text {
   background: linear-gradient(45deg, #ff6ec7, #f39c12, #3498db);
@@ -197,11 +180,9 @@ body {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
@@ -226,7 +207,8 @@ h2 {
 
 /* Form Styling */
 form {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  backdrop-filter: blur(10px);
   padding: 20px;
   margin-top: 20px;
   border: 1px solid #ddd;
@@ -270,6 +252,7 @@ button:hover {
 /* Specific Pages */
 #login-page,
 #register-page {
+  background-image: url(login.jpg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -343,7 +326,7 @@ tr:nth-child(even) {
 
 .report-link {
   display: block;
-  background-color: #4caf50;
+  background-color: #2c3e50;
   color: white;
   text-align: center;
   padding: 10px 0;
@@ -353,5 +336,5 @@ tr:nth-child(even) {
 }
 
 .report-link:hover {
-  background-color: #45a049;
+  background-color: #2c3e50;
 }

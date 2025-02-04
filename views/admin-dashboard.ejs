@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/sports-icon.png" type="image/x-icon" />
+  </head>
+  <body id="admin-dashboard">
+    <header>
+      <h1>Welcome, <%= user.name %></h1>
+    </header>
+    <div class="container dashboard">
+      <div class="logout">
+        <a href="/logout">Logout</a>
+      </div>
+      <section class="content">
+        <div>
+          <h2>Sports</h2>
+          <ul>
+            <% sports.forEach(sport => { %>
+            <li><%= sport.name %></li>
+            <% }) %>
+          </ul>
+          <h2>Create Sport</h2>
+          <form action="/create-sport" method="POST">
+            <label for="name">Sport Name:</label>
+            <input type="text" name="name" id="name" required />
+            <button type="submit">Create Sport</button>
+          </form>
+        </div>
+        <div>
+          <h2>All Sessions</h2>
+          <ul>
+            <% sessions.forEach(session => { %>
+            <li>
+              Sport: <%= session.sport_name %>, Teams: <%= session.team1 %> vs
+              <%= session.team2 %>, Date: <%= session.date %>, Venue: <%=
+              session.venue %>
+              <br />Created by: <%= session.creator_name %> <br />Players:
+              <ul>
+                <% session.players.forEach(player => { %>
+                <li><%= player.name %></li>
+                <% }) %>
+              </ul>
+              <% if (session.cancelled) { %>
+              <div class="cancelled">
+                Cancelled: <%= session.cancellation_reason %>
+              </div>
+              <% } %>
+              <form action="/delete-session" method="POST">
+                <input
+                  type="hidden"
+                  name="session_id"
+                  value="<%= session.id %>"
+                />
+                <button type="submit">Delete</button>
+                <form action="/join-session" method="POST">
+                  <input
+                    type="hidden"
+                    name="session_id"
+                    value="<%= session.id %>"
+                  />
+                  <button type="submit">Join</button>
+                </form>
+              </form>
+            </li>
+            <% }) %>
+          </ul>
+        </div>
+      </section>
+
+      <h2>Create Session</h2>
+      <form action="/create-session" method="POST">
+        <label for="sport_id">Sport:</label>
+        <select name="sport_id" id="sport_id" required>
+          <% sports.forEach(sport => { %>
+          <option value="<%= sport.id %>"><%= sport.name %></option>
+          <% }) %>
+        </select>
+        <label for="team1">Team 1:</label>
+        <input type="text" name="team1" id="team1" required />
+        <label for="team2">Team 2:</label>
+        <input type="text" name="team2" id="team2" required />
+        <label for="additional_players">Additional Players:</label>
+        <input
+          type="number"
+          name="additional_players"
+          id="additional_players"
+          required
+        />
+        <label for="date">Date:</label>
+        <input type="datetime-local" name="date" id="date" required />
+        <label for="venue">Venue:</label>
+        <input type="text" name="venue" id="venue" required />
+        <button type="submit">Create Session</button>
+      </form>
+
+      <a href="/reports" class="report-link">View Reports</a>
+    </div>
+  </body>
+  
+</html>

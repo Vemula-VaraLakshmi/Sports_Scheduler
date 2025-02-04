@@ -1,0 +1,22 @@
+{
+  "name": "sports_management",
+  "version": "1.0.0",
+  "description": "Sports Session Management App Description This is a web-based application for managing sports sessions, allowing users to register, log in, create sessions, and join them. It features two types of users: Admins and Players. Admins can create sports, manage sessions, and view reports, while players can join available sessions. The application uses Express, PostgreSQL, bcryptjs for authentication, and EJS for rendering dynamic content.",
+  "main": "database.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "pg": "^8.12.0"
+  }
+}

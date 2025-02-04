@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register</title>
+    <link rel="icon" href="/sports-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body id="register-page">
+    <div class="container">
+      <form action="/register" method="POST">
+        <h1>Register</h1>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required />
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required />
+        <label for="role">Role:</label>
+        <select name="role" id="role">
+          <option value="player">Player</option>
+          <option value="admin">Admin</option>
+        </select>
+        <button type="submit">Register</button>
+        <p>Already have an account? <a href="/login">Login</a></p>
+      </form>
+    </div>
+  </body>
+  
+</html>

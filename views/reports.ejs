@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reports</title>
+    <link rel="icon" href="/sports-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body id="reports-page">
+    <header>
+      <h1>Reports</h1>
+    </header>
+    <div class="container">
+      <h2>Session Details</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Sport</th>
+            <th>Teams</th>
+            <th>Date</th>
+            <th>Venue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% sessions.forEach(session => { %>
+          <tr>
+            <td><%= session.sport_name %></td>
+            <td><%= session.team1 %> vs <%= session.team2 %></td>
+            <td><%= session.date %></td>
+            <td><%= session.venue %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <h2>Sport Popularity</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Sport</th>
+            <th>Number of Sessions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% popularity.forEach(sport => { %>
+          <tr>
+            <td><%= sport.name %></td>
+            <td><%= sport.count %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+  
+</html>

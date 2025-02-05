@@ -1,4 +1,4 @@
-# **Sports Scheduler: Your Go-To Sports Event Planner 🏆**  
+# **Sports Scheduler: Your Go-To Sports Event Planner 🏆**
 
 ## **Introduction**  
 Sports Scheduler is a dynamic web application built to **simplify the organization and management of sports events**. Designed as part of the **WD501 course**, this platform offers a streamlined experience for both **administrators and players**, enabling smooth scheduling and participation in sports activities.  
@@ -12,8 +12,10 @@ The Sports Scheduler is a **user-friendly solution** that allows individuals to 
 
 ### **The Challenge 🌟**  
 As a capstone project for the **WD501 course**, the objective was to develop a **fully operational Sports Scheduler** that facilitates **active participation in sports** and encourages better event organization.  
-#### ** HOME ** 
-![Home](/public/homepic.png)
+
+#### **🏠 Home**  
+![Home](/public/homepic.png)  
+
 ### **User Roles & Capabilities 🚀**  
 
 #### **1️⃣ Administrator 🧑‍💼**  
@@ -32,7 +34,7 @@ As a capstone project for the **WD501 course**, the objective was to develop a *
 - Manages both hosted and joined sessions via the **Player Dashboard**.  
 
 ##### **Player Dashboard Preview**  
-![Player Dashboard](/public/playerdash1.png)
+![Player Dashboard](/public/playerdash1.png)  
 ![Player Dashboard](/public/playerdash2.png)  
 
 ---
@@ -68,35 +70,50 @@ Follow these steps to **get started with the project locally**:
 ### **1️⃣ Clone the Repository**  
 Run the command below to download the project:  
 ```sh
-git clone git@github.com:Vemula-VaraLakshmi/Sports_Scheduler.git
+git clone https://github.com/Vemula-VaraLakshmi/Sports_Scheduler.git
+```
 
-### **2️⃣ Install Dependencies**
-Navigate to the project folder and install the necessary packages:
+### **2️⃣ Install Dependencies**  
+Navigate to the project folder and install the necessary packages:  
 ```sh
-cd sports-scheduler
+cd Sports_Scheduler
 npm install
+```
 
-### **3️⃣ Launch the Application**
-Start the server using:
+### **3️⃣ Launch the Application**  
+Start the server using:  
 ```sh
 node server.js
+```
+Or, if you're using **nodemon** (for automatic restarts):  
+```sh
+nodemon server.js
+```
 
-## **Tech Stack 💻**
-- **EJS** – Enables dynamic HTML templating.
-- **HTML & CSS** – Forms the front-end structure and styling.
-- **PostgreSQL** – Serves as the database for storing data.
-- **Express.js** – Powers the backend functionality.
+### **4️⃣ Access the Application**  
+Once the server is running, open your browser and visit:  
+```
+http://localhost:3000
+```
 
-## **Special Thanks 🙌**
-This project was developed as part of the WD501 course. Huge appreciation to the instructors and learning resources that provided valuable insights throughout the development journey.
+---
+
+## **Tech Stack 💻**  
+- **EJS** – Enables dynamic HTML templating.  
+- **HTML & CSS** – Forms the front-end structure and styling.  
+- **PostgreSQL** – Serves as the database for storing data.  
+- **Express.js** – Powers the backend functionality.  
+
+---
+
+## **Special Thanks 🙌**  
+This project was developed as part of the WD501 course. Huge appreciation to the instructors and learning resources that provided valuable insights throughout the development journey.  
+
+---
 
 ## **Changes & Enhancements**  
 ✅ **Improved terminology** while keeping the meaning intact.  
 ✅ **Structured screenshots properly**, especially for the **Admin Dashboard, Player Dashboard, and Authentication Screens**.  
 ✅ **Enhanced readability** by using concise descriptions and proper formatting.  
 
-This file is now **GitHub-ready** and visually appealing in VS Code. 🚀
-
-
-
-
+This file is now **GitHub-ready** and visually appealing in VS Code. 🚀  

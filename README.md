@@ -14,7 +14,7 @@ The Sports Scheduler is a **user-friendly solution** that allows individuals to 
 As a capstone project for the **WD501 course**, the objective was to develop a **fully operational Sports Scheduler** that facilitates **active participation in sports** and encourages better event organization.  
 
 #### **🏠 Home**  
-![Home](/public/homepic.png)  
+![Home](homepic.png)  
 
 ### **User Roles & Capabilities 🚀**  
 
@@ -25,7 +25,7 @@ As a capstone project for the **WD501 course**, the objective was to develop a *
 - Accesses a dedicated **Admin Dashboard** for management.  
 
 ##### **Admin Dashboard Preview**  
-![Admin Dashboard](/public/admindash.png)   
+![Admin Dashboard](admindash.png)   
 
 #### **2️⃣ Player 🏅**  
 - Creates an account and logs in with email authentication.  
@@ -34,8 +34,8 @@ As a capstone project for the **WD501 course**, the objective was to develop a *
 - Manages both hosted and joined sessions via the **Player Dashboard**.  
 
 ##### **Player Dashboard Preview**  
-![Player Dashboard](/public/playerdash1.png)  
-![Player Dashboard](/public/playerdash2.png)  
+![Player Dashboard](playerdash1.png)  
+![Player Dashboard](playerdash2.png)  
 
 ---
 
@@ -49,8 +49,8 @@ As a capstone project for the **WD501 course**, the objective was to develop a *
 - Access interactive **Login and Register pages**.  
 
 ##### **Authentication Screenshots**  
-![Login Page](/public/loginpic.png)  
-![Register Page](/public/registerpic.png)  
+![Login Page](loginpic.png)  
+![Register Page](registerpic.png)  
 
 ✅ **Players can initiate and customize sports sessions:**  
 - Set up sports events tailored to their preferences.  

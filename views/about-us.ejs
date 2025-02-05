@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Sports Scheduler</title>
+  <style>
+    body {
+      background: linear-gradient(120deg, #1e3c72, #2a5298);
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .home-button {
+      position: absolute;
+      top: 15px;
+      right: 30px;
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 8px 18px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .home-button:hover {
+      background-color: white;
+      color: #1e3c72;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 50px auto;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.2);
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-icon {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      background-color: #f39c12;
+      color: white;
+      font-size: 1.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .feature-item:hover .feature-icon {
+      background-color: #e67e22;
+    }
+
+    .feature-content h2 {
+      margin: 0;
+      font-size: 1.4rem;
+      color: #fff;
+    }
+
+    .feature-content p {
+      margin: 5px 0 0;
+      color: #ddd;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .feature-item {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .feature-icon {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>About Sports Scheduler</h1>
+    <a href="/" class="home-button">Home</a>
+  </header>
+
+  <div class="container">
+    <h1>What We Offer</h1>
+
+    <div class="feature-item">
+      <div class="feature-icon">📋</div>
+      <div class="feature-content">
+        <h2>Team Management</h2>
+        <p>Create and manage teams, assign players, and track statistics for various sports activities.</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">📅</div>
+      <div class="feature-content">
+        <h2>Schedule Management</h2>
+        <p>View and manage upcoming sports events, matches, and sessions. Filter by sport, date, and venue.</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🏅</div>
+      <div class="feature-content">
+        <h2>Player Registration</h2>
+        <p>Players can register, update profiles, and manage their participation in sports events.</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">📊</div>
+      <div class="feature-content">
+        <h2>Statistics and Reports</h2>
+        <p>Generate reports on team performance, player statistics, and participation. Analyze trends for data-driven
+          decisions.</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🔔</div>
+      <div class="feature-content">
+        <h2>Notifications and Alerts</h2>
+        <p>Receive real-time notifications about schedule changes, upcoming events, and important announcements.</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">⚙️</div>
+      <div class="feature-content">
+        <h2>Administration Panel</h2>
+        <p>Administrators have access to a dashboard to manage users, teams, sessions, and system settings.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -13,7 +13,7 @@ The Sports Scheduler is a **user-friendly solution** that allows individuals to 
 ### **The Challenge 🌟**  
 As a capstone project for the **WD501 course**, the objective was to develop a **fully operational Sports Scheduler** that facilitates **active participation in sports** and encourages better event organization.  
 #### ** HOME ** 
-![Home](homepic.png)
+![Home](/public/homepic.png)
 ### **User Roles & Capabilities 🚀**  
 
 #### **1️⃣ Administrator 🧑‍💼**  
@@ -23,7 +23,7 @@ As a capstone project for the **WD501 course**, the objective was to develop a *
 - Accesses a dedicated **Admin Dashboard** for management.  
 
 ##### **Admin Dashboard Preview**  
-![Admin Dashboard](admindash.png)   
+![Admin Dashboard](/public/admindash.png)   
 
 #### **2️⃣ Player 🏅**  
 - Creates an account and logs in with email authentication.  
@@ -32,8 +32,8 @@ As a capstone project for the **WD501 course**, the objective was to develop a *
 - Manages both hosted and joined sessions via the **Player Dashboard**.  
 
 ##### **Player Dashboard Preview**  
-![Player Dashboard](playerdash1.png)
-![Player Dashboard](playerdash2.png)  
+![Player Dashboard](/public/playerdash1.png)
+![Player Dashboard](/public/playerdash2.png)  
 
 ---
 
@@ -47,8 +47,8 @@ As a capstone project for the **WD501 course**, the objective was to develop a *
 - Access interactive **Login and Register pages**.  
 
 ##### **Authentication Screenshots**  
-![Login Page](loginpic.png)  
-![Register Page](registerpic.png)  
+![Login Page](/public/loginpic.png)  
+![Register Page](/public/registerpic.png)  
 
 ✅ **Players can initiate and customize sports sessions:**  
 - Set up sports events tailored to their preferences.  
@@ -68,4 +68,35 @@ Follow these steps to **get started with the project locally**:
 ### **1️⃣ Clone the Repository**  
 Run the command below to download the project:  
 ```sh
-git clone https://github.com/Likhitha-Setty/sports-scheduler.git
+git clone git@github.com:Vemula-VaraLakshmi/Sports_Scheduler.git
+
+### **2️⃣ Install Dependencies**
+Navigate to the project folder and install the necessary packages:
+```sh
+cd sports-scheduler
+npm install
+
+### **3️⃣ Launch the Application**
+Start the server using:
+```sh
+node server.js
+
+## **Tech Stack 💻**
+- **EJS** – Enables dynamic HTML templating.
+- **HTML & CSS** – Forms the front-end structure and styling.
+- **PostgreSQL** – Serves as the database for storing data.
+- **Express.js** – Powers the backend functionality.
+
+## **Special Thanks 🙌**
+This project was developed as part of the WD501 course. Huge appreciation to the instructors and learning resources that provided valuable insights throughout the development journey.
+
+## **Changes & Enhancements**  
+✅ **Improved terminology** while keeping the meaning intact.  
+✅ **Structured screenshots properly**, especially for the **Admin Dashboard, Player Dashboard, and Authentication Screens**.  
+✅ **Enhanced readability** by using concise descriptions and proper formatting.  
+
+This file is now **GitHub-ready** and visually appealing in VS Code. 🚀
+
+
+
+
